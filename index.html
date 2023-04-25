@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1{
+            color: blue;
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border-radius: 45px;
+            border: 10px;
+            border-style: double;
+            width: 50%;
+            margin: auto;
+            min-height: 50vh;
+        }
+
+        input {
+            border: solid 1px;
+            width: 50%;
+            border-radius: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+
+        button {
+            margin-top: 3%;
+            height: 27px;
+            width: 50%;
+            background-color: rgb(145, 255, 1);
+            border: 1px;
+            border-radius: 5px;
+            border-style: solid;
+            transition: 1s;
+        }
+
+        button:hover{
+background-color: rgb(7, 7, 107);
+color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div><h1>Phone Number Validator</h1>
+    <input id="phone">
+    <button onclick="checkphonenumber()"> Submit </button>
+    <p id="result"> Result! </p>
+    <script>
+        function checkphonenumber() {
+            let number = document.getElementById("phone").value
+            let result = document.getElementById("result")
+        if (number.length == 10) {
+            result.innerText = "This is a Valid Phone Number."
+        }
+        else {
+            result.innerText = "This is not a Valid Phone Number."
+        }
+    }
+    </script>
+    </div>
+</body>
+
+</html>
